@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase.Functions", "Firebase.Functions\Firebase.Functions.csproj", "{F98A21DE-0ED6-4F8B-8F07-7B1AE3DD8A49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{55CFB50E-7F4F-4A80-8D6A-A5F01A621F86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{B72DF45D-2EDD-47D4-B8FB-EC8F7C44122F}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase.Functions.Example", "Firebase.Functions.Example\Firebase.Functions.Example.csproj", "{174D6D54-B9E4-4CBB-B0E8-7770DBC81BD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F98A21DE-0ED6-4F8B-8F07-7B1AE3DD8A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98A21DE-0ED6-4F8B-8F07-7B1AE3DD8A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98A21DE-0ED6-4F8B-8F07-7B1AE3DD8A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98A21DE-0ED6-4F8B-8F07-7B1AE3DD8A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CFB50E-7F4F-4A80-8D6A-A5F01A621F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CFB50E-7F4F-4A80-8D6A-A5F01A621F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CFB50E-7F4F-4A80-8D6A-A5F01A621F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CFB50E-7F4F-4A80-8D6A-A5F01A621F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174D6D54-B9E4-4CBB-B0E8-7770DBC81BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174D6D54-B9E4-4CBB-B0E8-7770DBC81BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174D6D54-B9E4-4CBB-B0E8-7770DBC81BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174D6D54-B9E4-4CBB-B0E8-7770DBC81BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3988B722-588D-445C-B86C-D6FA7B568F41}
+	EndGlobalSection
+EndGlobal
