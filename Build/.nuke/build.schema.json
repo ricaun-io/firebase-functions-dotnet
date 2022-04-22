@@ -71,6 +71,9 @@
             "type": "string"
           }
         },
+        "ReleaseExample": {
+          "type": "boolean"
+        },
         "Root": {
           "type": "string",
           "description": "Root directory during build execution"
@@ -92,6 +95,7 @@
               "Build",
               "Clean",
               "Compile",
+              "CompileExample",
               "GitRelease",
               "Pack",
               "Release",
@@ -112,6 +116,7 @@
               "Build",
               "Clean",
               "Compile",
+              "CompileExample",
               "GitRelease",
               "Pack",
               "Release",

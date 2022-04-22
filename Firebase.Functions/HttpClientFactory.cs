@@ -12,7 +12,8 @@
         /// <summary>
         /// Creates a new <see cref="HttpClient"/> with authentication header when <see cref="FirebaseFunctions"/> is specified.
         /// </summary>
-        /// <param name="options">Firebase storage options.</param>
+        /// <param name="firebaseFunctions"></param>
+        /// <returns></returns>
         internal static async Task<HttpClient> CreateHttpClientAsync(this FirebaseFunctions firebaseFunctions)
         {
             var options = firebaseFunctions.Options;
