@@ -20,7 +20,7 @@
 
             var client = new HttpClient();
 
-            var uri = firebaseFunctions.Uri;
+            var uri = firebaseFunctions.Uri.Trim();
             if (!uri.StartsWith("http"))
                 uri = "https://" + uri.Trim('/');
 

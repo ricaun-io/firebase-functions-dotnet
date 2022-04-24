@@ -25,7 +25,7 @@ Install-Package FirebaseFunctions.net
 
 ## Usage
 
-### FirebaseFunctions.net
+### Firebase.Functions
 
 ```csharp
 string FirebaseApiKey = "###########";

@@ -1,9 +1,6 @@
 ﻿using Firebase.Auth;
 using System;
-using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace Firebase.Functions.Example
 {
@@ -25,7 +22,6 @@ namespace Firebase.Functions.Example
 
             var task = Task.Run(AsyncFirebaseFunctionsTest);
             task.GetAwaiter().GetResult();
-
             Console.ReadKey();
         }
 
@@ -53,7 +49,6 @@ namespace Firebase.Functions.Example
 
             firebaseJson.SetFirebaseConfig(firebaseConfigData);
         }
-
 
         private static async void AsyncFirebaseFunctionsTest()
         {
@@ -103,37 +98,6 @@ namespace Firebase.Functions.Example
                     str += "#";
             }
             return str;
-        }
-    }
-
-    public class FirebaseConfig
-    {
-        public string FileName => "FirebaseConfig.json";
-        public string Location => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        public string GetFilePath() => Path.Combine(Location, FileName);
-
-        public FirebaseConfigData GetFirebaseConfig()
-        {
-            var fileName = GetFilePath();
-            if (File.Exists(fileName))
-            {
-                var content = File.ReadAllText(fileName);
-                return JsonConvert.DeserializeObject<FirebaseConfigData>(content);
-            }
-            return new FirebaseConfigData();
-        }
-
-        public void SetFirebaseConfig(FirebaseConfigData firebaseJsonData)
-        {
-            var fileName = GetFilePath();
-            var content = JsonConvert.SerializeObject(firebaseJsonData);
-            File.WriteAllText(fileName, content);
-        }
-        public class FirebaseConfigData
-        {
-            public string FirebaseApiKey { get; set; } = "";
-            public string FirebaseFunctions { get; set; } = "";
-            public string FirebaseCallFunction { get; set; } = "";
         }
     }
 }
