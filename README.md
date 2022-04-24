@@ -7,7 +7,7 @@
 [![Develop](../../actions/workflows/Develop.yml/badge.svg)](../../actions)
 [![Release](https://img.shields.io/nuget/v/FirebaseFunctions.net?logo=nuget&label=release&color=blue)](https://www.nuget.org/packages/FirebaseFunctions.net)
 
-Firebase functions library.
+Firebase functions library for C# to work with [`https.onCall`](https://firebase.google.com/docs/functions/callable-reference).
 
 For Authenticating with Firebase checkout the [Firebase Authentication library](https://github.com/step-up-labs/firebase-authentication-dotnet).
 
@@ -21,7 +21,7 @@ Install-Package FirebaseFunctions.net
 * .NET Standard 1.1 - see https://github.com/dotnet/standard/blob/master/docs/versions.md for compatibility matrix.
 
 ## Supported scenarios
-* Firbase Functions
+* Firbase Functions [`https.onCall`](https://firebase.google.com/docs/functions/callable-reference)
 
 ## Usage
 
