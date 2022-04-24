@@ -1,4 +1,4 @@
 {
   "$schema": "./build.schema.json",
-  "Solution": "../Firebase.Functions.sln"
+  "Solution": "../FirebaseFunctions.sln"
 }

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Firebase.Functions\Firebase.Functions.csproj" />
+    <ProjectReference Include="..\FirebaseFunctions\FirebaseFunctions.csproj" />
   </ItemGroup>
 
 </Project>
