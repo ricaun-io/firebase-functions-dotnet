@@ -53,11 +53,10 @@ Console.WriteLine($"Response: {response}");
 exports.Test = functions.https.onCall((data, context) => {
     // check request is made by an admin
     if (context.auth.token.admin !== true) {
-        return { error: 'Only admins can test.' }
+        return { message: 'This user is not admin.' }
     }
-    // get user and add admin custom claim
     return {
-        message: `Success!.`
+        message: `Admin success!`
     }
 });
 
