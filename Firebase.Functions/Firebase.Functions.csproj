@@ -26,14 +26,15 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Firebase.Functions</PackageId>
+    <PackageId>FirebaseFunctions.net</PackageId>
+    <GitHubId>firebase-functions-dotnet</GitHubId>
     <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
     <Company>ricaun</Company>
     <Authors>Luiz Henrique Cassettari</Authors>
-    <Description>ContextMenu for Reviutt RibbonPControl -  $(PackageId).</Description>
+    <Description>Firebase Functions for dotnet -  $(PackageId).</Description>
     <CopyrightYears>$([System.DateTime]::Now.ToString('yyyy'))</CopyrightYears>
   </PropertyGroup>
 
@@ -46,13 +47,10 @@
   <PropertyGroup>
     <GitHubRepositoryOwner>ricaun-io</GitHubRepositoryOwner>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/$(GitHubRepositoryOwner)/$(PackageId)</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/$(GitHubRepositoryOwner)/$(PackageId)</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/$(GitHubRepositoryOwner)/$(GitHubId)</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/$(GitHubRepositoryOwner)/$(GitHubId)</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <!--
     <PackageIcon>icon.png</PackageIcon>
-    -->
-    <PackageIconUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="!$(Configuration.Contains('Debug'))">
@@ -67,6 +65,21 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
       <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 

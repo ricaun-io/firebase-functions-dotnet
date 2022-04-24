@@ -6,6 +6,14 @@
 [![Publish](../../actions/workflows/Publish.yml/badge.svg)](../../actions)
 [![Develop](../../actions/workflows/Develop.yml/badge.svg)](../../actions)
 
+Firebase functions library.
+
+## Installation
+```csharp
+// Install release version
+Install-Package FirebaseAuthentication.net
+```
+
 ## Release
 
 * [Latest release](../../releases/latest)
