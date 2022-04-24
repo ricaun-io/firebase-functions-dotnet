@@ -30,7 +30,7 @@ Install-Package FirebaseFunctions.net
 ```csharp
 string FirebaseApiKey = "###########";
 string FirebaseFunctions = "###########.cloudfunctions.net";
-static string FirebaseCallFunction = "Test";
+string FirebaseCallFunction = "Test";
 
 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(FirebaseApiKey));
 var auth = await authProvider.SignInAnonymouslyAsync();
