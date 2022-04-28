@@ -39,7 +39,8 @@
             var httpClient = await firebaseFunctions.CreateHttpClientAsync();
             var responseMessage = await httpClient.PostAsync(name, CreateHttpContent(data));
             var content = await responseMessage.Content.ReadAsStringAsync();
-            return content;
+            var firebaseResult = JsonConvert.DeserializeObject<FirebaseResult>(content, firebaseFunctions.Options.JsonSerializerSettings);
+            return firebaseResult.Result.ToString();
         }
 
         /// <summary>
@@ -76,13 +77,13 @@
         /// <summary>
         /// FirebaseData
         /// </summary>
-        public class FirebaseData
+        internal class FirebaseData
         {
             /// <summary>
             /// FirebaseData
             /// </summary>
             /// <param name="data"></param>
-            public FirebaseData(object data)
+            internal FirebaseData(object data)
             {
                 this.Data = data;
             }
@@ -92,6 +93,18 @@
             /// </summary>
             [JsonProperty("data")]
             public object Data { get; set; }
+        }
+
+        /// <summary>
+        /// FirebaseResult
+        /// </summary>
+        internal class FirebaseResult
+        {
+            /// <summary>
+            /// Result
+            /// </summary>
+            [JsonProperty("result")]
+            public object Result { get; set; }
         }
     }
 }

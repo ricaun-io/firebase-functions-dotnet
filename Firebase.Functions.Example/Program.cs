@@ -67,10 +67,17 @@ namespace Firebase.Functions.Example
                     });
 
                 var function = functions.GetHttpsCallable(FirebaseCallFunction);
-                Console.WriteLine($"CallAsync: {FirebaseCallFunction}");
 
+                Console.WriteLine($"CallAsync: {FirebaseCallFunction}");
                 var response = await function.CallAsync();
                 Console.WriteLine($"CallResponse: {response}");
+
+                if (FirebaseCallFunction == "Test")
+                {
+                    Console.WriteLine($"CallAsync<MessageResponse>: {FirebaseCallFunction}");
+                    var responseMessage = await function.CallAsync<MessageResponse>();
+                    Console.WriteLine($"CallResponse<MessageResponse>.Message: {responseMessage.Message}");
+                }
 
                 Console.WriteLine($"DeleteAnonymously");
                 await authProvider.DeleteUserAsync(auth.FirebaseToken);
@@ -99,5 +106,10 @@ namespace Firebase.Functions.Example
             }
             return str;
         }
+    }
+
+    internal class MessageResponse
+    {
+        public string Message { get; set; }
     }
 }
