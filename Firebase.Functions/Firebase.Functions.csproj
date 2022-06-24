@@ -29,7 +29,7 @@
     <AssemblyName>Firebase.Functions</AssemblyName>
     <PackageId>FirebaseFunctions.net</PackageId>
     <GitHubId>firebase-functions-dotnet</GitHubId>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -84,6 +84,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="*" />
   </ItemGroup>
 </Project>
